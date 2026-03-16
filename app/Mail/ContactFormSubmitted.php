@@ -15,14 +15,16 @@ class ContactFormSubmitted extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $senderName;
     public $senderEmail;
     public $senderMessage;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($senderEmail, $senderMessage)
+    public function __construct($senderName, $senderEmail, $senderMessage)
     {
+        $this->senderName = $senderName;
         $this->senderEmail = $senderEmail;
         $this->senderMessage = $senderMessage;
     }

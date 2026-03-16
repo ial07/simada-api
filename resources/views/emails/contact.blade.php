@@ -15,6 +15,7 @@
             <h2>New Website Inquiry</h2>
         </div>
         <div class="content">
+            <p><strong>Name:</strong> {{ $senderName }}</p>
             <p><strong>Reply-To:</strong> {{ $senderEmail }}</p>
             <hr>
             <p><strong>Message:</strong></p>
